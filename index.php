@@ -21,7 +21,9 @@
                 </ol> <!-- carousel-indicators finish -->
                 
                 <div class="carousel-inner"> <!-- carousel-inner Begin -->
-                   
+                   <!-- <div class='item active'>
+                        <img src='admin_area/slides_images/$slide_I'>
+                   </div> -->
                    <?php
                         $get_slides = "select * from slider LIMIT 0,1";
                     
@@ -33,7 +35,7 @@
                             echo "
                                 <div class='item active'> 
 
-                                    <img src='admin_area/slides_images/$slide_I'>
+                                    <img src='images/$slide_I'>
 
                                 </div>
                             
@@ -50,7 +52,7 @@
                             echo "
                                 <div class='item'> 
 
-                                    <img src='admin_area/slides_images/$slide_I'>
+                                    <img src='images/$slide_I'>
 
                                 </div>
                             
@@ -170,13 +172,197 @@
     <div id="content" class="container"> <!-- container Begin -->
         
         <div class="row"> <!-- row Begin -->
+
            
-           <?php
-            
-            getPro();
-            
-            ?>
-            
+           <div class='col-sm-4 col-sm-6 single'>
+                
+                <div class='product''>
+                    
+                    <a href='#'>
+                        
+                        <img class='img-responsive' src='images/phone.jpg' alt='#'>
+                        
+                    </a>
+                    
+                    <div class='text'>
+                        
+                        <h3>
+                            <a href='#'>
+                                Galaxy Smart Phone
+                            </a>                           
+                        </h3>
+                        
+                        <p class='price'>
+                            
+                            ৳ 15999
+                        
+                        </p>
+                        
+                        <p class='button'>
+                            
+                            <a class='btn btn-default' href='#'>
+                                View Details
+                            </a>
+                            
+                            <a class='btn btn-primary' href='#'>
+                                
+                                <i class='fa fa-shopping-cart'>
+                                    
+                                    Add To Cart
+                                    
+                                </i>
+                                
+                            </a>
+                            
+                        </p>
+                        
+                    </div>
+                    
+                </div>
+
+                
+            </div>
+            <div class='col-sm-4 col-sm-6 single'>
+                
+                <div class='product''>
+                    
+                    <a href='#'>
+                        
+                        <img class='img-responsive' src='images/11.jpg' alt='#'>
+                        
+                    </a>
+                    
+                    <div class='text'>
+                        
+                        <h3>
+                            <a href='#'>
+                                Galaxy Smart Phone
+                            </a>                           
+                        </h3>
+                        
+                        <p class='price'>
+                            
+                            ৳ 15999
+                        
+                        </p>
+                        
+                        <p class='button'>
+                            
+                            <a class='btn btn-default' href='#'>
+                                View Details
+                            </a>
+                            
+                            <a class='btn btn-primary' href='#'>
+                                
+                                <i class='fa fa-shopping-cart'>
+                                    
+                                    Add To Cart
+                                    
+                                </i>
+                                
+                            </a>
+                            
+                        </p>
+                        
+                    </div>
+                    
+                </div>
+
+            </div>
+            <div class='col-sm-4 col-sm-6 single'>
+                
+                <div class='product''>
+                    
+                    <a href='#'>
+                        
+                        <img class='img-responsive' src='images/2.jpg' alt='#'>
+                        
+                    </a>
+                    
+                    <div class='text'>
+                        
+                        <h3>
+                            <a href='#'>
+                                Galaxy Smart Phone
+                            </a>                           
+                        </h3>
+                        
+                        <p class='price'>
+                            
+                            ৳ 15999
+                        
+                        </p>
+                        
+                        <p class='button'>
+                            
+                            <a class='btn btn-default' href='#'>
+                                View Details
+                            </a>
+                            
+                            <a class='btn btn-primary' href='#'>
+                                
+                                <i class='fa fa-shopping-cart'>
+                                    
+                                    Add To Cart
+                                    
+                                </i>
+                                
+                            </a>
+                            
+                        </p>
+                        
+                    </div>
+                    
+                </div>
+
+            </div>
+            <div class='col-sm-4 col-sm-6 single'>
+                
+                <div class='product''>
+                    
+                    <a href='#'>
+                        
+                        <img class='img-responsive' src='images/3.jpg' alt='#'>
+                        
+                    </a>
+                    
+                    <div class='text'>
+                        
+                        <h3>
+                            <a href='#'>
+                                Galaxy Smart Phone
+                            </a>                           
+                        </h3>
+                        
+                        <p class='price'>
+                            
+                            ৳ 15999
+                        
+                        </p>
+                        
+                        <p class='button'>
+                            
+                            <a class='btn btn-default' href='#'>
+                                View Details
+                            </a>
+                            
+                            <a class='btn btn-primary' href='#'>
+                                
+                                <i class='fa fa-shopping-cart'>
+                                    
+                                    Add To Cart
+                                    
+                                </i>
+                                
+                            </a>
+                            
+                        </p>
+                        
+                    </div>
+                    
+                </div>
+
+            </div>
         </div> <!-- row finish -->
         
     </div> <!-- container finish -->

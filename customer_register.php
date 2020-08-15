@@ -21,15 +21,7 @@
 
             </div> <!-- col-md-12 finish -->
 
-            <div class="col-md-3"> <!-- col-md-3 Begin -->
 
-                <?php 
-
-                    include("includes/sidebar.php")
-
-                ?>
-
-            </div> <!-- col-md-3 finish -->
 
             <div class="col-md-9"> <!-- col-md-9 Begin -->
 

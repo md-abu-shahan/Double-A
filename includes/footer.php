@@ -26,11 +26,11 @@
                            
                            if(!isset($_SESSION['customer_email'])){
                                
-                               echo"<a href='checkout.php'>Login</a>";
+                               echo"<a href='#'>Login</a>";
                                
                            }else{
                                
-                              echo"<a href='logout.php'>Log out</a>"; 
+                              echo"<a href='#'>Log out</a>"; 
                                
                            }
                            
@@ -43,7 +43,7 @@
                            
                            if(!isset($_SESSION['customer_email'])){
                                
-                               echo"<a href='customer_register.php'>Register</a>";
+                               echo"<a href='#'>Register</a>";
                                
                            }else{
                                
@@ -65,34 +65,16 @@
                 <h4>Top Products Categories</h4>
                 
                 <ul><!-- ul Begin -->
-                
-                <?php
-                    
-                    $get_p_cats = "select * from product_categories";
-                    
-                    $run_p_cats = mysqli_query($con,$get_p_cats);
-                    
-                    while($row_p_cats=mysqli_fetch_array($run_p_cats)){
-                        
-                        $p_cat_id = $row_p_cats['p_cat_id'];
-                        $p_cat_title = $row_p_cats['p_cat_title'];
-                        
-                        echo "
-                        
-                            <li>
+                <li>
                             
-                                <a href='shop.php?p_cat=$p_cat_id'>
-                                
-                                    $p_cat_title
-                                
-                                </a>
-                                
-                            </li>
-                        
-                        ";
-                        
-                    }
-                ?>
+                    <a href='#'>
+                    
+                        Product
+                    
+                    </a>
+                    
+                </li>
+                
                 
                 </ul><!-- ul finish -->
                 
@@ -115,7 +97,7 @@
                     
                 </p><!-- p finish -->
                 
-                <a href="contact.php">Check Our Contact Page</a>
+                <a href="#">Check Our Contact Page</a>
                 
                 <hr class="hidden-md hidden-lg">
                 

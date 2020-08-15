@@ -2,7 +2,7 @@
 
     session_start();
     include("includes/db.php");
-    include("functions/functions.php");   
+    include("includes/functions.php");   
 
 ?>
 

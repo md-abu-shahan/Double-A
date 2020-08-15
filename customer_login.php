@@ -5,7 +5,7 @@
         <center>
             <h1> Login </h1>
             <p class="lead"> Already have an account ? </p>
-            <p class="text-muted"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo cum porro, at dolores. Nihil odit fuga perspiciatis earum et laudantium consectetur iste cum. Consectetur cupiditate cumque, porro quis soluta delectus? </p>
+            <p class="text-muted"></p>
             
         </center>
         
@@ -84,7 +84,7 @@ if(isset($_POST['login'])){
         
         $_SESSION['customer_email'] = $customer_email;
         echo "<script>alert('You are logged in ') </script>";
-        echo "<script>window.open('customer/my_account.php?my_orders','_self') </script>";
+        echo "<script>window.open('index.php?my_orders','_self') </script>";
     }
     else
     {
