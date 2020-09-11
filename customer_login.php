@@ -61,7 +61,7 @@ if(isset($_POST['login'])){
     $customer_email = $_POST['c_email'];
     $customer_pass = $_POST['c_pass'];
     
-    $select_customer = "select * from customers where customer_email = '$customer_email' AND customer_pass = '$customer_pass'";
+    $select_customer = "select * from registration where customer_email = '$customer_email' AND customer_pass = '$customer_pass'";
     
     $run_customer = mysqli_query($con,$select_customer);
     

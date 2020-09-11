@@ -149,6 +149,8 @@
         $run_cart = mysqli_query($con,$sel_cart);
         
         $check_cart = mysqli_num_rows($run_cart);
+		
+/****
         
         if($check_cart>0){
         
@@ -171,6 +173,10 @@
         echo "<script>window.open('index.php','_self')</script>";
         
     }
+	
+****/
+
+	echo "<script>window.open('index.php','_self')</script>";
     
 }
 
