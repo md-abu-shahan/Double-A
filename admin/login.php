@@ -9,7 +9,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Burhan Botics Admin Area</title>
+    <title>Admin Panel (AA)</title>
+    <link rel = "icon" type = "image/png" href="..//images/1.png">
     <link rel="stylesheet" href="css/bootstrap-337.min.css">
     <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -58,7 +59,7 @@
             
             echo "<script>alert('Logged in. Welcome Back')</script>";
             
-            echo "<script>window.open('index.php?new_registration','_self')</script>";
+            echo "<script>window.open('index.php?dashboard','_self')</script>";
             
         }else{
             

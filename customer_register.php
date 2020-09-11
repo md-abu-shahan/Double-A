@@ -150,31 +150,16 @@
         
         $check_cart = mysqli_num_rows($run_cart);
 		
-/****
-        
-        if($check_cart>0){
-        
-        /// If register have items in cart ///
-        
-        $_SESSION['customer_email']=$c_email;
-        
-        echo "<script>alert('You have been Registered Sucessfully')</script>";
-        
-        echo "<script>window.open('checkout.php','_self')</script>";
-        
-    }else{
+
         
         /// If register without items in cart ///
         
-        $_SESSION['customer_email']=$c_email;
+
         
-        echo "<script>alert('You have been Registered Sucessfully')</script>";
+    echo "<script>alert('Your Registration panding')</script>";
         
-        echo "<script>window.open('index.php','_self')</script>";
-        
-    }
-	
-****/
+       
+
 
 	echo "<script>window.open('index.php','_self')</script>";
     

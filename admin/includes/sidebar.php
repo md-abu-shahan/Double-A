@@ -102,13 +102,24 @@
             </li><!-- li finish -->
 			
 			<li><!-- li begin -->
-                <a href="index.php?new_registration"><!-- a href begin -->
+                <a href="#" data-toggle="collapse" data-target="#p_cat"><!-- a href begin -->
                         
-                        <i class="fa fa-fw fa-book"></i> New Resgistration
+                        <i class="fa fa-fw fa-edit"></i> Products Categories
+                        <i class="fa fa-fw fa-caret-down"></i>
                         
                 </a><!-- a href finish -->
                 
+                <ul id="p_cat" class="collapse"><!-- collapse begin -->
+                    <li><!-- li begin -->
+                        <a href="index.php?insert_p_cat"> Insert Product Category </a>
+                    </li><!-- li finish -->
+                    <li><!-- li begin -->
+                        <a href="index.php?view_p_cats"> View Products Categories </a>
+                    </li><!-- li finish -->
+                </ul><!-- collapse finish -->
+                
             </li><!-- li finish -->
+            
             
             <li><!-- li begin -->
                 <a href="#" data-toggle="collapse" data-target="#products"><!-- a href begin -->
@@ -129,44 +140,24 @@
                 
             </li><!-- li finish -->
             
+                       
+            
+            
             <li><!-- li begin -->
-                <a href="#" data-toggle="collapse" data-target="#p_cat"><!-- a href begin -->
+                <a href="index.php?new_registration"><!-- a href begin -->
                         
-                        <i class="fa fa-fw fa-edit"></i> Products Categories
-                        <i class="fa fa-fw fa-caret-down"></i>
+                        <i class="fa fa-fw fa-book"></i> New Resgistration
                         
                 </a><!-- a href finish -->
                 
-                <ul id="p_cat" class="collapse"><!-- collapse begin -->
-                    <li><!-- li begin -->
-                        <a href="index.php?insert_p_cat"> Insert Product Category </a>
-                    </li><!-- li finish -->
-                    <li><!-- li begin -->
-                        <a href="index.php?view_p_cats"> View Products Categories </a>
-                    </li><!-- li finish -->
-                </ul><!-- collapse finish -->
-                
             </li><!-- li finish -->
-            
+
             <li><!-- li begin -->
-                <a href="#" data-toggle="collapse" data-target="#cat"><!-- a href begin -->
-                        
-                        <i class="fa fa-fw fa-book"></i> Categories
-                        <i class="fa fa-fw fa-caret-down"></i>
-                        
+                <a href="index.php?view_customers"><!-- a href begin -->
+                    <i class="fa fa-fw fa-users"></i> View Customers
                 </a><!-- a href finish -->
-                
-                <ul id="cat" class="collapse"><!-- collapse begin -->
-                    <li><!-- li begin -->
-                        <a href="index.php?insert_cat"> Insert Category </a>
-                    </li><!-- li finish -->
-                    <li><!-- li begin -->
-                        <a href="index.php?view_cats"> View Categories </a>
-                    </li><!-- li finish -->
-                </ul><!-- collapse finish -->
-                
             </li><!-- li finish -->
-            
+
             <li><!-- li begin -->
                 <a href="#" data-toggle="collapse" data-target="#slides"><!-- a href begin -->
                         
@@ -185,12 +176,7 @@
                 </ul><!-- collapse finish -->
                 
             </li><!-- li finish -->
-            
-            <li><!-- li begin -->
-                <a href="index.php?view_customers"><!-- a href begin -->
-                    <i class="fa fa-fw fa-users"></i> View Customers
-                </a><!-- a href finish -->
-            </li><!-- li finish -->
+
             
             <li><!-- li begin -->
                 <a href="index.php?view_orders"><!-- a href begin -->

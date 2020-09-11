@@ -95,7 +95,7 @@
                    <ul class="nav navbar-nav left"> <!-- nav navbar-nav left Begin -->
                        
                        <li><a href="index.php">Home</a></li>
-                       <li><a href="#">Shop</a></li>
+                       <li><a href="shop.php">Shop</a></li>
                        <li>
                        
                            <?php 
@@ -109,18 +109,20 @@
                        
                        </li>
                        <li><a href="#">Shopping Cart</a></li>
-                       <li><a href="#">Contact Us</a></li>
+                       <li><a href="contact.php">Contact Us</a></li>
                    </ul> <!-- nav navbar-nav left finish -->
                    
                </div> <!-- padding-nav finish -->
+               <?php
+                if(isset($_SESSION['customer_email'])){
+                    echo "
+                        <a href='#' class=\"btn navbar-btn btn-primary right\"><!-- btn navbar-btn btn-primary right Begin--> 
+                        <i class=\"fa fa-shopping-cart\"></i>
+                        <span>Items In Your Cart</span>
+                        </a> <!-- btn navbar-btn btn-primary right finish --> ";
+                    }
+                ?>
                
-               <a href="#" class="btn navbar-btn btn-primary right"><!-- btn navbar-btn btn-primary right Begin--> 
-                  
-                   <i class="fa fa-shopping-cart"></i>
-                   
-                   <span>Items In Your Cart</span>
-                   
-               </a> <!-- btn navbar-btn btn-primary right finish -->
                
                <div class="navbar-collapse collapse right"> <!-- navbar-collapse collapse right Begin -->
                    

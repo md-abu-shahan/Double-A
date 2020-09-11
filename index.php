@@ -176,195 +176,20 @@
         <div class="row"> <!-- row Begin -->
 
            
-           <div class='col-sm-4 col-sm-6 single'>
-                
-                <div class='product''>
-                    
-                    <a href='#'>
+           
+            <div id="content" class="container"> <!-- container Begin -->
+        
+                    <div class="row"> <!-- row Begin -->
+                       
+                       <?php
                         
-                        <img class='img-responsive' src='images/phone.jpg' alt='#'>
+                        getPro();
                         
-                    </a>
-                    
-                    <div class='text'>
+                        ?>
                         
-                        <h3>
-                            <a href='#'>
-                                Galaxy Smart Phone
-                            </a>                           
-                        </h3>
-                        
-                        <p class='price'>
-                            
-                            ৳ 15999
-                        
-                        </p>
-                        
-                        <p class='button'>
-                            
-                            <a class='btn btn-default' href='#'>
-                                View Details
-                            </a>
-                            
-                            <a class='btn btn-primary' href='#'>
-                                
-                                <i class='fa fa-shopping-cart'>
-                                    
-                                    Add To Cart
-                                    
-                                </i>
-                                
-                            </a>
-                            
-                        </p>
-                        
-                    </div>
-                    
-                </div>
-
-                
-            </div>
-            <div class='col-sm-4 col-sm-6 single'>
-                
-                <div class='product''>
-                    
-                    <a href='#'>
-                        
-                        <img class='img-responsive' src='images/11.jpg' alt='#'>
-                        
-                    </a>
-                    
-                    <div class='text'>
-                        
-                        <h3>
-                            <a href='#'>
-                                Galaxy Smart Phone
-                            </a>                           
-                        </h3>
-                        
-                        <p class='price'>
-                            
-                            ৳ 15999
-                        
-                        </p>
-                        
-                        <p class='button'>
-                            
-                            <a class='btn btn-default' href='#'>
-                                View Details
-                            </a>
-                            
-                            <a class='btn btn-primary' href='#'>
-                                
-                                <i class='fa fa-shopping-cart'>
-                                    
-                                    Add To Cart
-                                    
-                                </i>
-                                
-                            </a>
-                            
-                        </p>
-                        
-                    </div>
-                    
-                </div>
-
-            </div>
-            <div class='col-sm-4 col-sm-6 single'>
-                
-                <div class='product''>
-                    
-                    <a href='#'>
-                        
-                        <img class='img-responsive' src='images/2.jpg' alt='#'>
-                        
-                    </a>
-                    
-                    <div class='text'>
-                        
-                        <h3>
-                            <a href='#'>
-                                Galaxy Smart Phone
-                            </a>                           
-                        </h3>
-                        
-                        <p class='price'>
-                            
-                            ৳ 15999
-                        
-                        </p>
-                        
-                        <p class='button'>
-                            
-                            <a class='btn btn-default' href='#'>
-                                View Details
-                            </a>
-                            
-                            <a class='btn btn-primary' href='#'>
-                                
-                                <i class='fa fa-shopping-cart'>
-                                    
-                                    Add To Cart
-                                    
-                                </i>
-                                
-                            </a>
-                            
-                        </p>
-                        
-                    </div>
-                    
-                </div>
-
-            </div>
-            <div class='col-sm-4 col-sm-6 single'>
-                
-                <div class='product''>
-                    
-                    <a href='#'>
-                        
-                        <img class='img-responsive' src='images/3.jpg' alt='#'>
-                        
-                    </a>
-                    
-                    <div class='text'>
-                        
-                        <h3>
-                            <a href='#'>
-                                Galaxy Smart Phone
-                            </a>                           
-                        </h3>
-                        
-                        <p class='price'>
-                            
-                            ৳ 15999
-                        
-                        </p>
-                        
-                        <p class='button'>
-                            
-                            <a class='btn btn-default' href='#'>
-                                View Details
-                            </a>
-                            
-                            <a class='btn btn-primary' href='#'>
-                                
-                                <i class='fa fa-shopping-cart'>
-                                    
-                                    Add To Cart
-                                    
-                                </i>
-                                
-                            </a>
-                            
-                        </p>
-                        
-                    </div>
-                    
-                </div>
-
-            </div>
+                    </div> <!-- row finish -->
+              
+            </div> <!-- container finish -->
         </div> <!-- row finish -->
         
     </div> <!-- container finish -->
