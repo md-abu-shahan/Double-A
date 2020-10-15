@@ -93,6 +93,7 @@
                         </div> <!-- text-center finish -->
                         
                     </form> <!-- form finish -->
+                    
                     <?php
                           require 'phpmailer\PHPMailerAutoload.php';
                           $mail = new PHPMailer;

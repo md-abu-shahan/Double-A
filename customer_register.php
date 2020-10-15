@@ -21,7 +21,15 @@
 
             </div> <!-- col-md-12 finish -->
 
+            <div class="col-md-3"> <!-- col-md-3 Begin -->
 
+                <?php 
+
+                    include("includes/sidebar.php")
+
+                ?>
+
+            </div> <!-- col-md-3 finish -->
 
             <div class="col-md-9"> <!-- col-md-9 Begin -->
 
@@ -149,19 +157,28 @@
         $run_cart = mysqli_query($con,$sel_cart);
         
         $check_cart = mysqli_num_rows($run_cart);
-		
-
+        
+        if($check_cart>0){
+        
+        /// If register have items in cart ///
+        
+        $_SESSION['customer_email']=$c_email;
+        
+        echo "<script>alert('You have been Registered Sucessfully')</script>";
+        
+        echo "<script>window.open('checkout.php','_self')</script>";
+        
+    }else{
         
         /// If register without items in cart ///
         
-
+        $_SESSION['customer_email']=$c_email;
         
-    echo "<script>alert('Your Registration panding')</script>";
+        echo "<script>alert('You have been Registered Sucessfully')</script>";
         
-       
-
-
-	echo "<script>window.open('index.php','_self')</script>";
+        echo "<script>window.open('index.php','_self')</script>";
+        
+    }
     
 }
 

@@ -1,5 +1,3 @@
-<!--- Creator : MD. ABU SHAHAN --->
-
 <?php
     $active='Home';
     include("includes/header.php");
@@ -23,9 +21,7 @@
                 </ol> <!-- carousel-indicators finish -->
                 
                 <div class="carousel-inner"> <!-- carousel-inner Begin -->
-                   <!-- <div class='item active'>
-                        <img src='admin_area/slides_images/$slide_I'>
-                   </div> -->
+                   
                    <?php
                         $get_slides = "select * from slider LIMIT 0,1";
                     
@@ -37,7 +33,7 @@
                             echo "
                                 <div class='item active'> 
 
-                                    <img src='images/$slide_I'>
+                                    <img src='admin_area/slides_images/$slide_I'>
 
                                 </div>
                             
@@ -54,7 +50,7 @@
                             echo "
                                 <div class='item'> 
 
-                                    <img src='images/$slide_I'>
+                                    <img src='admin_area/slides_images/$slide_I'>
 
                                 </div>
                             
@@ -174,22 +170,13 @@
     <div id="content" class="container"> <!-- container Begin -->
         
         <div class="row"> <!-- row Begin -->
-
            
-           
-            <div id="content" class="container"> <!-- container Begin -->
-        
-                    <div class="row"> <!-- row Begin -->
-                       
-                       <?php
-                        
-                        getPro();
-                        
-                        ?>
-                        
-                    </div> <!-- row finish -->
-              
-            </div> <!-- container finish -->
+           <?php
+            
+            getPro();
+            
+            ?>
+            
         </div> <!-- row finish -->
         
     </div> <!-- container finish -->

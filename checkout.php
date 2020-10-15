@@ -1,8 +1,6 @@
 <?php
     $active='Home';
     include("includes/header.php");
-    include("includes/db.php");
-
 
 ?>
 
@@ -21,11 +19,20 @@
 
         </div> <!-- col-md-12 finish -->
 
+        <div class="col-md-3"> <!-- col-md-3 Begin -->
+
+            <?php 
+
+                include("includes/sidebar.php")
+
+            ?>
+
+        </div> <!-- col-md-3 finish -->
         <div class="col-md-9">
             <?php 
 
                 if(!isset($_SESSION['customer_email'])){
-                    include("customer_login.php");
+                    include("customer/customer_login.php");
                 }else
                 {
                     include("payment_option.php");

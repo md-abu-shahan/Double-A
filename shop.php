@@ -41,7 +41,8 @@
                             <h1>Shop</h1>
                             <p>
 
-                                একবার শপিং করে দেখেন !!
+                                একবার শপিং করে দেখেন !!, সারাজীবন মনে থাকবে । <br>
+                                আসেন শপিং করে চলে যান।
 
                             </p>
                         </div> <!-- box finish -->
@@ -80,7 +81,7 @@
                                     
                                         <div class = 'product'>
                                             <a href = 'details.php?pro_id=$pro_id'>
-                                                <img class = 'img-responsive' src = 'admin/product_images/$pro_img1'>
+                                                <img class = 'img-responsive' src = 'admin_area/product_images/$pro_img1'>
                                             </a>
                                             
                                             <div class='text'>

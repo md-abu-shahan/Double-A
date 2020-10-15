@@ -2,7 +2,35 @@
 
     session_start();
     include("includes/db.php");
-    include("includes/functions.php");   
+    include("functions/functions.php");
+        
+    if(isset($_GET['pro_id'])){
+        $product_id = $_GET['pro_id'];
+        
+        $get_product = "select * from products where product_id = '$product_id'";
+        
+        $run_product = mysqli_query($con, $get_product);
+        
+        $row_product = mysqli_fetch_array($run_product);
+        
+        $p_cat_id = $row_product['p_cat_id'];
+        $pro_title = $row_product['product_title'];
+        $pro_price = $row_product['product_price'];
+        $pro_img1 = $row_product['product_img1'];
+        $pro_img2 = $row_product['product_img2'];
+        $pro_img3 = $row_product['product_img3'];
+        $pro_desc = $row_product['product_desc'];
+        
+        $get_p_cat = "select * from product_categories where p_cat_id = '$p_cat_id'";
+        
+        $run_p_cat = mysqli_query($con, $get_p_cat);
+        
+        $row_p_cat = mysqli_fetch_array($run_p_cat);
+        
+        $p_cat_title = $row_p_cat['p_cat_title'];
+        
+    }
+        
 
 ?>
 
@@ -11,8 +39,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name = "viewport" content = "width=device-width, initial-scale =1">
-    <title>Double A</title>
-    <link rel = "icon" type = "image/png" href="images/1.png">
+    <title>Double_A</title>
+    <link rel = "icon" type = "image/png" href="images/tLogo.png">
     <link rel="stylesheet" href="styles/bootstrap-337.min.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
@@ -25,7 +53,7 @@
                     <?php
                         
                     if(isset($_SESSION['customer_email'])){
-                        echo $_SESSION['customer_email'] . "";
+                        echo "Welcome: " . $_SESSION['customer_email'] . "";
                     }else
                     {
                         echo "Welcome Guest";
@@ -50,12 +78,12 @@
                     if(isset($_SESSION['customer_email'])){
                         echo "
                             <li>
-                                <a href='#'>My Account</a>
+                                <a href='customer/my_account.php'>My Account</a>
                             </li> ";
                         }
                     ?>
                     <li>
-                        <a href="#">Go To Cart</a>
+                        <a href="cart.php">Go To Cart</a>
                     </li>
                     <li>
                         <?php
@@ -82,10 +110,26 @@
                
                 <a href="index.php" class="navbar-brand home"> <!-- navbar-brand home begin -->
                     
-                    <img src="images/1.png" alt="Double A LOGO" class="d-inline-block align-top">
+                    <img src="images/ecom-store-logo.png" alt="LOGO" class="hidden-xs">
+                    <img src="images/ecom-store-logo-mobile.png" alt="LOGO mobile " class="visible-xs">
                     
                 </a>  <!-- navbar-brand home finish -->
                 
+                <button class="navbar-toggle" data-toggle = "collapse" data-target ="#navigation">
+                    
+                    <span class="sr-only">Toggle Navigation</span>
+                    
+                    <i class="fa fa-align-justify"></i>
+                    
+                </button>
+                
+                <button class="navbar-toggle" data-toggle = "collapse" data-target ="#search">
+                    
+                    <span class="sr-only">Toggle Search</span>
+                    
+                    <i class="fa fa-search"></i>
+                    
+                </button>
             </div>  <!-- navbar-header finish -->
             
             <div class="navbar-collapse collapse" id="navigation"><!-- navbar-collapse collapse Begin -->
@@ -94,35 +138,36 @@
                    
                    <ul class="nav navbar-nav left"> <!-- nav navbar-nav left Begin -->
                        
-                       <li><a href="index.php">Home</a></li>
-                       <li><a href="shop.php">Shop</a></li>
-                       <li>
+                       <li class="<?php if($active=='Home') echo"active" ?>"><a href="index.php">Home</a></li>
+                       <li class="<?php if($active=='Shop') echo"active" ?>"><a href="shop.php">Shop</a></li>
+                       <li class="<?php if($active=='Account') echo"active" ?>">
                        
                            <?php 
+                           
                            if(isset($_SESSION['customer_email'])){
                                
-                              echo"<a href='#'>My Account</a>"; 
+                              echo"<a href='customer/my_account.php?my_orders'>My Account</a>"; 
                                
                            }
                            
                            ?>
                        
                        </li>
-                       <li><a href="#">Shopping Cart</a></li>
-                       <li><a href="contact.php">Contact Us</a></li>
+                       <li class="<?php if($active=='Cart') echo"active" ?>"><a href="cart.php">Shopping Cart</a></li>
+                       <li class="<?php if($active=='Contact') echo"active" ?>"><a href="contact.php">Contact Us</a></li>
                    </ul> <!-- nav navbar-nav left finish -->
                    
                </div> <!-- padding-nav finish -->
+               
                <?php
                 if(isset($_SESSION['customer_email'])){
                     echo "
-                        <a href='#' class=\"btn navbar-btn btn-primary right\"><!-- btn navbar-btn btn-primary right Begin--> 
+                        <a href='cart.php' class=\"btn navbar-btn btn-primary right\"><!-- btn navbar-btn btn-primary right Begin--> 
                         <i class=\"fa fa-shopping-cart\"></i>
-                        <span>Items In Your Cart</span>
+                        <span> "?> <?php items();?> <?php echo"Items In Your Cart</span>
                         </a> <!-- btn navbar-btn btn-primary right finish --> ";
                     }
                 ?>
-               
                
                <div class="navbar-collapse collapse right"> <!-- navbar-collapse collapse right Begin -->
                    
@@ -138,7 +183,7 @@
                
                <div class="collapse clearfix" id="search">  <!--collapse clearfix Begin -->
                    
-                   <form method="get" action="#" class="navbar-form"> <!--navbar-form Begin -->
+                   <form method="get" action="results.php" class="navbar-form"> <!--navbar-form Begin -->
                        
                        <div class="input-group"> <!--input-group Begin -->
                            
