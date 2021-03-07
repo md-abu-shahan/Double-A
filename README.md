@@ -1,2 +1,3 @@
 # Double-A
-Web Eng
+
+This is a Web-based project that is like e-commerce software
